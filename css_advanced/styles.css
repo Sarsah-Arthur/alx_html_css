@@ -11,6 +11,10 @@
   --font-family-base: "Source-sans-Pro-Regular";
   --font-family-title: "Source-sans-Pro-Semibold";
   --font-family-bold: "Source-sans-Pro-Bold";
+  --font-family-black: "Source-sans-Pro-Black";
+  --font-family-italic: "Source-sans-Pro-Italic";
+  --font-family-light: "Source-sans-Pro-Light";
+  --font-family-semibold: "Source-sans-Pro-Semibold";
 
   --font-size-x-small: 1rem;
   --font-size-small: 1.2rem;
@@ -35,17 +39,32 @@
       ============================= */
 @font-face {
   font-family: Source-sans-Pro-Bold;
-  src: url("./fonts/SourceSansPro-Bold.otf");
+  src: url("Fonts/SourceSansPro-Bold.otf");
   font-weight: var(--font-weight-bold);
 }
 @font-face {
   font-family: Source-sans-Pro-Regular;
-  src: url("./fonts/SourceSansPro-Regular.otf");
+  src: url("Fonts/SourceSansPro-Regular.otf");
   font-weight: var(--font-weight-regular);
 }
 @font-face {
   font-family: Source-sans-Pro-Semibold;
-  src: url("./fonts/SourceSansPro-Semibold.otf");
+  src: url("Fonts/SourceSansPro-Semibold.otf");
+  font-weight: var(--font-weight-bold);
+}
+@font-face {
+  font-family: Source-sans-Pro-Black;
+  src: url("Fonts/SourceSansPro-Black.otf");
+  font-weight: var(--font-weight-bold);
+}
+@font-face {
+  font-family: Source-sans-Pro-Italic;
+  src: url("Fonts/SourceSansPro-It.otf");
+  font-weight: var(--font-weight-bold);
+}
+@font-face {
+  font-family: Source-sans-Pro-Light;
+  src: url("Fonts/SourceSansPro-Light.otf");
   font-weight: var(--font-weight-bold);
 }
 
@@ -140,6 +159,7 @@ body {
   cursor: pointer;
   margin-bottom: 60px;
   margin-top: 15px;
+  font-family: var(--font-family-semibold);
 }
 
 /* Learn from the Pros Section */
@@ -178,7 +198,8 @@ h4 {
 }
 
 p {
-  font-size: 10px;
+  font-size: 16px;
+  font-family: var(--font-family-italic);
   color: var(--color-white);
 }
 
@@ -207,16 +228,18 @@ p {
 /* Quote Text */
 .quote-text {
   flex: 1; /* Let the text occupy the available space */
+  font-family: Source-sans-Pro-Regular; /* Apply font to entire quote text block */
 }
 
 blockquote {
   font-size: 22px;
-  font-style: italic;
   margin-top: 80px;
+  font-family: var(--font-family-base);
 }
 
 .quote-text p {
   font-size: 1rem;
+  font-family: var(--font-family-base);
   margin: 5px 0;
   font-size: 22px;
 }
@@ -238,12 +261,15 @@ blockquote {
 }
 
 .most-popular {
+  font-family:var(--font-family-light) ;
   text-align: center;
   margin-bottom: 20px;
   color: var(--color-black);
   margin-top: 60px;
 }
-
+.most-popular strong {
+  font-family: var(--font-family-bold);
+}
 /* Video Section */
 .video {
   position: relative;
@@ -272,10 +298,12 @@ blockquote {
 
 .detail {
   color: var(--color-black);
+  font-family: var(--font-family-bold);
 }
 
 #h4 {
   font-size: 16px;
+  font-family: var(--font-family-base);
   margin-bottom: 10px;
   /*color: var(--color-black);*/
 }
@@ -284,7 +312,8 @@ blockquote {
 #p {
   font-size: 13px;
   margin-bottom: 10px;
-  white-space: pre-wrap; /* Allow text to break and wrap within paragraphs */
+  text-align: left;
+  font-family: var(--font-family-light);
   color: grey;
 }
 
@@ -331,6 +360,7 @@ h5 {
   margin: 0 50px;
   text-align: center;
   margin-bottom: 30px;
+  font-family: var(--font-family-base);
 }
 
 .member img {
@@ -339,14 +369,19 @@ h5 {
   margin-bottom: 10px;
 }
 
+.member p {
+  font-family: var(--font-family-base);
+}
+
 faq {
   padding: 20px;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-light);
   text-align: left; /* <- This aligns section-wide text to the left */
 }
 
 .faq-title {
-  font-size: 2rem;
+  font-family: var(--font-family-light);
+  font-size: 3rem;
   margin-bottom: 20px;
   text-align: center; /* Keeps the title centered */
 }
@@ -358,22 +393,31 @@ faq {
 }
 
 .faq-item {
+  font-family: var(--font-family-light);
   max-width: 400px;
   padding: 10px;
   text-align: left; /* <- Ensure individual items are left-aligned */
+}
+
+.faq-item #h3 {
+  font-family: var(--font-family-bold);
+}
+
+.faq-item #t {
+  font-family: var(--font-weight-regular);
 }
 
 #h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--color-black);
-  font-family: var(--font-family-bold);
+  font-family: var(--font-family-light);
   text-align: left; /* <- Explicit left alignment */
 }
 
 #t {
   font-size: 1rem;
-  color: var(--color-black);
+  color: gray;
   font-family: var(--font-family-base);
   text-align: left; /* <- Ensures the paragraph is left-aligned */
 }
@@ -385,45 +429,54 @@ faq {
   position: relative;
   block-size: 240px;
   background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .bottom-logo {
-  display: inline;
-  justify-content: space-between;
+  transform: translateX(-130px); /* shift logo slightly left */
 }
 .bottom-logo img {
-  margin: 40px auto;
+  max-width: 150px;
+  height: auto;
+  display: block;
 }
 
 .social-icons {
-  margin: 40px auto;
-  display: inline;
-  float: right;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  transform: translateX(150px); /* shift icons slightly right */
 }
 
 .social-icons a {
   padding: 10px;
   text-decoration: none;
 }
+
 .social-icons i {
   font-size: 2em;
-  color: var(--color-white);
+  color: white;
 }
 
 .footer-bottom {
-  padding: 20px;
+  margin-top: 20px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .footer-bottom p {
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-thin);
-  color: var(--color-white);
-  mix-blend-mode: normal;
-  opacity: 0.2;
+  color: white;
+  opacity: 0.5;
   font-size: 15px;
 }
