@@ -11,5 +11,3 @@ Welcome to the repository for the CSS Advanced Project! This project highlights 
 * Layouts built with Flexbox and CSS Grid
 * Integration of scalable vector graphics (SVG)
 * Clean, modular, and reusable CSS class structure
-
-[![Live Demo Preview](./demo.png)](https://Sarsah-Arthur.github.io/alx_html_css/)
