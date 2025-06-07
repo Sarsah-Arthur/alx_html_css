@@ -149,6 +149,10 @@ body {
   margin: 0 10px;
 }
 
+.words p {
+  font-family: var(--font-family-bold);
+}
+
 .button {
   padding: 9px 18px;
   background-color: var(--color-primary);
@@ -164,10 +168,13 @@ body {
 
 /* Learn from the Pros Section */
 .learn-from-pros {
+  font-family: var(--font-family-light);
   text-align: center;
   padding: 40px 0;
 }
+
 .learn {
+  font-family: var(--font-family-bold);
   color: var(--color-primary);
 }
 
@@ -350,9 +357,14 @@ h5 {
       ============================= */
 
 .membership {
+  font-family: var(--font-family-light);
   text-align: center;
   padding: 40px 0;
   background: var(--background-color);
+}
+
+.membership strong {
+  font-family: var(--font-family-bold);
 }
 
 .member {
@@ -445,7 +457,7 @@ faq {
 }
 
 .bottom-logo {
-  transform: translateX(-130px); /* shift logo slightly left */
+  transform: translateX(-150px); /* shift logo slightly left */
 }
 .bottom-logo img {
   max-width: 150px;
