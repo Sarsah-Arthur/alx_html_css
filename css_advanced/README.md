@@ -12,4 +12,4 @@ Welcome to the repository for the CSS Advanced Project! This project highlights 
 * Integration of scalable vector graphics (SVG)
 * Clean, modular, and reusable CSS class structure
 
-![Website Demo](https://github.com/Sarsah-Arthur/alx_html_css/blob/6bb1c17a6d06668d0422e9cd5589b0e11d82290d/css_advanced/index.html)
+[![Live Demo Preview](./demo.png)](https://Sarsah-Arthur.github.io/alx_html_css/)
