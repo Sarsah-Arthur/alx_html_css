@@ -416,7 +416,7 @@ faq {
 }
 
 .faq-item #t {
-  font-family: var(--font-weight-regular);
+  font-family: var(--font-family-base);
 }
 
 #h3 {
